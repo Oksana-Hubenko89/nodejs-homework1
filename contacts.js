@@ -16,7 +16,7 @@ function listContacts() {
     if (err) {
       console.log(err.message)
     }
-    console.table(JSON.parse(data))
+    console.table(JSON.parse(data.toString))
   })
 }
 
@@ -74,7 +74,7 @@ function addContact(name, email, phone) {
     }
     contacts.push(newContact)
 
-    fs.writeFile(contactPath, JSON.stringify(user,null,'\t'), { flag: 'a' }, err => {
+    fs.writeFile(contactPath, JSON.stringify(user), (err,data)=> {
     if (err) {
       console.log(err.message)
     }
@@ -90,5 +90,5 @@ function addContact(name, email, phone) {
     listContacts,
     getContactById,
     removeContact,
-    addContact
+    addContact,
   }
