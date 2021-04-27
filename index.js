@@ -1,4 +1,4 @@
-const { listContacts, getContactById, removeContact, addContact } = require('./contacts.js')
+const { listContacts, getContactById, removeContact, addContact } = require('../../nodejs-homework-template/contacts.js/index.js')
 const { Command } = require('commander')
 const program = new Command()
 
@@ -18,6 +18,7 @@ function invokeAction({ action, id, name, email, phone }) {
     case 'list':
       listContacts()
       break
+
     case 'get':
       getContactById(id)
       break
@@ -25,11 +26,14 @@ function invokeAction({ action, id, name, email, phone }) {
     case 'add':
       addContact(name, email, phone)
       break
+
     case 'remove':
       removeContact(id)
       break
+
     default:
       console.warn('\x1B[31m Unknown action type!')
   }
 }
+
 invokeAction(argv)
