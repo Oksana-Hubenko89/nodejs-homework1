@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-homework1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js",
+    "start:dev": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oksana-Hubenko89/nodejs-homework1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oksana-Hubenko89/nodejs-homework1/issues"
+  },
+  "homepage": "https://github.com/Oksana-Hubenko89/nodejs-homework1#readme",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^7.2.0",
+    "nodemon": "^2.0.7",
+    "shortid": "^2.2.16",
+    "yargs": "^16.2.0"
+  }
+}
